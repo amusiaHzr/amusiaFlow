@@ -1,6 +1,8 @@
 # amusiaFlow
 一个简单的流式布局：
 
+支持自定义布局
+
 ![image](https://github.com/amusiaHzr/amusiaFlow/blob/master/flow.jpg)
 	
 	
@@ -38,3 +40,10 @@
 
 	  step 4:
 	  flowView.setAdapter(simpleFlowAdapter);
+关于我：
+第一次开源项目的三流菜鸡android开发，这个项目比较简单，如果感兴趣的同学可以打开源码看看，每一行基本都有注释
+感谢：
+享学课堂： alvin老师
+网易微专业：熊翔老师
+
+
