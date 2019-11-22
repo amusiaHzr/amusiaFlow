@@ -51,7 +51,11 @@
 
 
 感谢 
-享学课堂： alvin老师
-网易微专业：熊翔老师
+
+
+享学课堂： alvin老师  https://ke.qq.com/teacher/2464061231
+
+
+网易微专业：熊翔老师  https://study.163.com/smartSpec/intro.htm
 
 
