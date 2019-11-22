@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 //        flowView.setAdapter(flowAdapter);
 
         flowView = findViewById(R.id.flow_view);
+
         simpleFlowAdapter = new SimpleFlowAdapter<DataBean>(this, R.layout.item, datas) {
             @Override
             public void convert(View itemView, Object object, int position) {
@@ -77,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "长按事件：" + position, Toast.LENGTH_SHORT).show();
             }
         });
-        flowView.setAdapter(simpleFlowAdapter);
+        flowView.setHorizontalSpace(20)
+                .setVerticalSpace(50)
+                .setAdapter(simpleFlowAdapter);
 
 
     }

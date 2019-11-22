@@ -50,9 +50,10 @@ public class FlowView extends ViewGroup {
         //注册数据监听
         mAdapter.registerObserver(mObserver);
         //循环添加view
+        View child;
         for (int i = 0; i < mAdapter.getItemCount(); i++) {
             //创建一个view
-            View child = mAdapter.onCreateView(this, i);
+            child = mAdapter.onCreateView(this, i);
             //给view适配数据
             mAdapter.onBindView(child, mAdapter.getItem(i), i);
             //添加到viewGroup
@@ -127,9 +128,9 @@ public class FlowView extends ViewGroup {
         int rightPadding = getPaddingRight();
         int topPadding = getPaddingTop();
         int bottomPadding = getPaddingBottom();
-
+        View child;
         for (int i = 0; i < childCount; i++) {
-            View child = getChildAt(i);
+            child = getChildAt(i);
             int childWidth = child.getLayoutParams().width;
             int childHeight = child.getLayoutParams().height;
             int childMeasureWidth = getChildMeasureSpec(widthMeasureSpec, leftPadding + rightPadding, childWidth);
@@ -199,6 +200,8 @@ public class FlowView extends ViewGroup {
         int currentL = 0;
         //初始的top为0
         int currentT = 0;
+        //view移出for循环，防止大量创建变量，造成内存抖动
+        View view;
         //遍历所有行
         for (int i = 0; i < lineCount; i++) {
             //取到当前行
@@ -207,7 +210,7 @@ public class FlowView extends ViewGroup {
             int lineHeight = heights.get(i);
             //遍历当前行的所有列
             for (int j = 0; j < views.size(); j++) {
-                View view = views.get(j);
+                view = views.get(j);
                 //计算left top right bottom四个点
                 int left = currentL;
                 int right = left + view.getMeasuredWidth();
@@ -224,5 +227,23 @@ public class FlowView extends ViewGroup {
             currentT = currentT + lineHeight + verticalSpace;
 
         }
+    }
+
+    public int getVerticalSpace() {
+        return verticalSpace;
+    }
+
+    public FlowView setVerticalSpace(int verticalSpace) {
+        this.verticalSpace = verticalSpace;
+        return this;
+    }
+
+    public int getHorizontalSpace() {
+        return horizontalSpace;
+    }
+
+    public FlowView setHorizontalSpace(int horizontalSpace) {
+        this.horizontalSpace = horizontalSpace;
+        return this;
     }
 }
