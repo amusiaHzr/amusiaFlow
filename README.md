@@ -1,8 +1,10 @@
 # amusiaFlow
 一个简单的流式布局：
 
-![]https://github.com/amusiaHzr/amusiaFlow/blob/master/flow.jpg
-![]https://github.com/amusiaHzr/amusiaFlow/blob/master/flow.gif
+![image](https://github.com/amusiaHzr/amusiaFlow/blob/master/flow.jpg)
+	
+	
+![image](https://github.com/amusiaHzr/amusiaFlow/blob/master/flow.gif)
 
 
 	如何使用：
