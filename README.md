@@ -21,7 +21,7 @@
 
 	  step 2：
 	  dependencies {
-			implementation 'com.github.amusiaHzr:amusiaFlow:1.0'
+			implementation 'com.github.amusiaHzr:amusiaFlow:1.1'
 		}
 
 	  step 3：
